@@ -1,0 +1,347 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1em;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Start your base/mobile styles here */
+
+html, body {
+    font-size: 14px;
+    font-family: 'Domine', serif;
+    line-height: 1.25em;
+    background-color: #fffdfa;
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+}
+
+h1 {
+    font-family: 'Domine', serif;
+    font-size: 26px;
+    line-height: 1em;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 1%;
+    padding-top: 5%;
+}
+
+h3 {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    line-height: 1.25em;
+}
+
+.byline {
+    margin-left: 10%;
+    margin-bottom: 5%;
+    font-family: 'Space Mono', monospace;
+    color: #B43C2F;
+}
+
+img {
+    display: block;
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+figcaption {
+    font-size: 12px;
+    color: #808080;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    line-height: 1em;
+}
+
+input[type='number'] {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 150px;
+    border: 1px solid #818181;
+}
+
+button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 40%;
+    background-color: #555555;
+    color: #FFFFFF;
+    font-family: 'Domine', serif;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+span {
+    line-height: 1em;
+}
+
+p {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+
+p.intro::first-letter {
+    color: #B43C2F;
+    font-size: 2em;
+    font-weight: 900;
+    padding-right: .1em;
+}
+
+a {
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-bottom: 5%;
+    font-style: italic;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 12px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.lead_img {
+    display: block;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.fruit {
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.fruitcap {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.results {
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    display: block;
+    Font-size: 20px;
+    line-height: 1em;
+    text-align: center;
+    width: 100%;
+    height: 415px;
+}
+
+.answer, .wall {
+    color: #B43C2F;
+    font-size: 4em;
+}
+
+#final-results {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .lead_img {
+        display: block;
+        max-width: 550px;
+        max-height: 550px;
+        width: 100%;
+        height: 100%;
+    }
+    figcaption {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 5px;
+        line-height: 1em;
+    }
+    img {
+        display: block;
+        max-width: 250px;
+        max-height: 250px;
+        width: 50%;
+        margin-top: 20px;
+    }
+    p {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 2%;
+    }
+    a {
+        padding-left: 45%;
+        padding-right: 45%;
+        padding-bottom: 5%;
+        font-style: italic;
+    }
+    h3 {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-weight: bold;
+        line-height: 1.25em;
+    }
+    button {
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 280px;
+        background-color: #555555;
+        color: #FFFFFF;
+        font-family: 'Domine', serif;
+        font-size: 24px;
+        border-radius: 8px;
+    }
+    .calculator {
+        position: relative;
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+    .fruit {
+        display: inline-block;
+        width: 40%;
+    }
+    .fruit_img {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .fruitcap {
+        text-align: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .italic {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-bottom: 5%;
+    }
+    input[type='number'] {
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: 150px;
+        border: 1px solid #818181;
+        position: relative;
+    }
+    .button {
+        margin: 0 auto;
+    }
+    .results {
+        height: 375px;
+    }
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+    h1 {
+        font-family: 'Domine', serif;
+        font-size: 26px;
+        line-height: 1em;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 1%;
+        padding-top: 5%;
+        line-height: 1.25em;
+    }
+    h3 {
+        margin-left: 15%;
+        margin-right: 15%;
+        font-weight: bold;
+        line-height: 1.25em;
+    }
+    .byline {
+        margin-left: 20%;
+        margin-bottom: 5%;
+        font-family: 'Space Mono', monospace;
+        color: #B43C2F;
+    }
+    .lead_img {
+        display: block;
+        max-width: 700px;
+        max-height: 500px;
+        width: 100%;
+        height: 100%;
+    }
+    figcaption {
+        font-size: 12px;
+        color: #808080;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 2%;
+        padding-bottom: 2%;
+        line-height: 1em;
+    }
+    p {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-bottom: 2%;
+    }
+    h3 {
+        margin-left: 15%;
+        margin-right: 15%;
+        font-weight: bold;
+        line-height: 1.25em;
+    }
+    .results {
+        height: 450px;
+    }
+}

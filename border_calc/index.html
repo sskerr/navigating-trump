@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+    <head>
+
+        <meta charset="utf-8">
+        <!-- set the character set -->
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- first step to a responsive site -->
+
+        <title>How Much Will Your Guac Habit Contribute to the Border Wall?</title>
+
+
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Allerta+Space+Mono|Domine" rel="stylesheet">
+
+        <!-- Your styles should be called here -->
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+        <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+    </head>
+
+    <body>
+
+        <h1> How Much Will Your Guac Habit Contribute to the Border Wall? </h1>
+        <h5 class="byline"> By Sarah Stein Kerr </h5>
+
+
+
+
+        <img src="images/border_fence.jpg" class="lead_img">
+        <figcaption> A section of the US-Mexican border wall. Photo: U.S. Fish and Wildlife Service via Wikimedia Commons </figcaption>
+
+
+        <br>
+        <p class="intro"> Do you like avocados? Tecate Beer? Congratulations! You may soon be contributing to America’s next big infrastructure project: the southern border wall. </p>
+        <p> In January, the Trump administration indicated that it is considering a plan to levy a 20 percent tax on all goods imported from Mexico. While hurting Mexican industries, this tax would also directly affect American consumers, many of whom unknowingly
+            consume products from Mexico every day. </p>
+        <p> So how much would you pay for the wall through what you normally eat and drink? </p>
+
+        <h3> Enter your monthly consumption of the top 10 food and beverage imports from Mexico to find out. </h3>
+
+
+        <div class="calculator">
+            <div class="fruit">
+
+                <img class="fruit_img" src="images/mango2.png" />
+                <h4 class="fruitcap"> Mangoes </h4>
+                <p class="italic"> Mangoes per month </p>
+                <input type="number" min="0" step="1" id="mango" data-storePrice="1.75" data-likelihood=".53" placeholder="Mangoes Purchased" />
+
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/avocado.png" />
+                <h4 class="fruitcap"> Avocados </h4>
+                <p class="italic"> Avocados per month </p>
+                <input type="number" id="avocado" placeholder="Avocados Purchased" />
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/tomato.png" />
+                <h4 class="fruitcap"> Tomatoes </h4>
+                <p class="italic"> Tomatoes per month </p>
+                <input type="number" id="tomato" placeholder="Tomatoes Purchased" />
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/banana2.png" />
+                <h4 class="fruitcap"> Bananas </h4>
+                <p class="italic"> Bananas per month </p>
+                <input type="number" id="banana" placeholder="Bananas Purchased" />
+            </div>
+
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/tangerine2.png" />
+                <h4 class="fruitcap"> Tangerines </h4>
+                <p class="italic">Tangerines per month </p>
+                <input type="number" id="tangerine" placeholder="Tangerines Purchased" />
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/strawberry3.png" />
+                <h4 class="fruitcap"> Strawberries </h4>
+                <p class="italic"> Containers per month </p>
+                <input type="number" id="strawberry" placeholder="Strawberries Purchased" />
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/lime.png" />
+                <h4 class="fruitcap"> Limes </h4>
+                <p class="italic"> Limes per month </p>
+                <input type="number" id="lime" placeholder="Limes Purchased" />
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/pineapple.png" />
+                <h4 class="fruitcap"> Pineapple </h4>
+                <p class="italic"> Pineapples per month</p>
+                <input type="number" id="pineapple" placeholder="Pineapples Purchased" />
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/beer.png" />
+                <h4 class="fruitcap"> Beer </h4>
+                <p class="italic"> Beers per month </p>
+                <input type="number" id="beer" placeholder="Beers Purchased" />
+            </div>
+
+            <div class="fruit">
+                <img class="fruit_img" src="images/tequila2.png" />
+                <h4 class="fruitcap"> Tequila </h4>
+                <p class="italic"> Bottles per month </p>
+                <input type="number" id="tequila" placeholder="Tequila Purchased" />
+            </div>
+
+            <div style="clear: both;"></div>
+
+        </div>
+
+        <br>
+
+
+        <button class="button" id="compute"> Calculate </button>
+
+
+        <div class="results">
+
+            <p> <span id="final-answer" class="hide"> Through consuming these 10 items, you will contribute </p>
+              <p> <span id="final-results" class="answer"> </span> </p>
+            <p> <span id="final-answer2" class="hide"> dollars to the southern border wall. </p>
+              <br>
+              <p id="wall_answer" class="hide">Your money will build </p>
+              <p> <span id = "wall" class="wall"></span> </p>
+            <p id="wall_answer2" class="hide"> square feet of the wall.</p>
+            </span>
+
+        </div>
+
+        <p class="intro">Disgusted? Happy? Sad? Whatever your politics, the number may come as a surprise. After floating this idea, the Trump administration walked it back, stating that it was one of many ideas currently on the table. </p>
+
+        <p> Now, three months later, Republicans are eyeing tax reform as their next big priority and a call for proposals to design the new border wall closed earlier this week. </p>
+
+        <p>Constanza Gallardo, 26, a Mexican graduate student studying in New York City was unnerved by the idea that buying products from Mexico might directly pay for the border wall in the future, a project she does not support.</p>
+
+        <p>“It would be a personal struggle,” said Gallardo. "Because you want to buy these things because you love to eat them and some money would go to Mexico. So, in some ways I am helping my country but in other ways I am helping to build the border
+            wall.” </p>
+
+        <p>In a report put out by The Tax Foundation, a non-partition tax policy research institute, tax expert Kyle Pomerleau writes that the new import taxes on Mexican goods would likely come with a host of sweeping changes that would revamp the way companies
+            pay income tax in the United States. </p>
+
+        <p> In the unlikely event this happens, Pomerleau establishes that the burden of the new import tax may also not be passed on to consumers in the long-term.
+            <p> "...the literature suggests that exchange rates would adjust, but it could take time for that to translate through prices. As a result, the tax could fall on consumers and producers in the short run," writes Pomerleau. </p>
+
+            <p> Beyond grocery items and alcohol, Mexico also exports large quantities of car parts, chemicals, clothing and other goods to the United States. Therefore, beyond food consumption, contributions from individuals would likely be higher. </p>
+
+            <p>So while it is currently unclear if the administration will move forward with a border tax, the question of who will pay for the wall also remains anyone’s guess. </p>
+
+
+
+            <a href="https://docs.google.com/document/d/16PIbpim_8UGmW2QPWun4hCC8swKY15Rj7_LkcQZx8tU/edit?usp=sharing"> Methodology </a>
+
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js "></script>
+
+
+            <script src="main.js "></script>
+
+
+            <!-- Your javascript should be called here -->
+    </body>
+    </p>
+
+</html>
