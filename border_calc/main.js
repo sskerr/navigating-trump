@@ -11,15 +11,15 @@ $(document).ready(function () { //checks if html is fully loaded
 		var avocado = parseFloat($("#avocado").val());
 		var tomato = parseFloat($("#tomato").val());
 		var banana = parseFloat($("#banana").val());
-		var tangerine = parseFloat($("#tangerine").val());
 		var strawberry = parseFloat($("#strawberry").val());
 		var lime = parseFloat($("#lime").val());
 		var pineapple = parseFloat($("#pineapple").val());
+		var coffee = parseFloat($("#coffee").val());
 		var beer = parseFloat($("#beer").val());
 		var tequila = parseFloat($("#tequila").val());
 
 
-		var total = calculate(mango, avocado, tomato, banana, tangerine, strawberry, lime, pineapple, beer, tequila);
+		var total = calculate(mango, avocado, tomato, banana, coffee, strawberry, lime, pineapple, beer, tequila);
 		var sqft = wall(total);
 		//	var wall = wall(wall);
 
