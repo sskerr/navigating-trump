@@ -45,7 +45,7 @@ table {
 html, body {
     font-size: 14px;
     font-family: 'Domine', serif;
-    line-height: 1.25em;
+    line-height: 1.5em;
     background-color: #fffdfa;
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
 }
@@ -61,10 +61,15 @@ h1 {
 }
 
 h3 {
+    font-size: 16pt;
     margin-left: 10%;
     margin-right: 10%;
     font-weight: bold;
     line-height: 1.25em;
+}
+
+h4 {
+    font-size: 14pt;
 }
 
 .byline {
@@ -118,6 +123,7 @@ span {
 }
 
 p {
+    font-size: 14pt;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
@@ -194,6 +200,30 @@ a {
 #final-results {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.thick-line {
+    font-family: 'Domine', serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 1.25em;
+    width: 60%;
+    border-left-style: solid;
+    border-width: 10px;
+    border-color: #B5C336;
+    padding: 20px 0px 20px 30px;
+    margin-left: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+}
+
+#pq-byline {
+    font-family: 'Domine', serif;
+    font-size: 11pt;
+    font-weight: 500;
+    line-height: 1em;
+    width: 60%;
+    margin-bottom: 5%;
 }
 
 
@@ -287,6 +317,29 @@ a {
     }
     .results {
         height: 375px;
+    }
+    .thick-line {
+        font-family: 'Domine', serif;
+        font-size: 1.5em;
+        font-weight: 900;
+        line-height: 1.25em;
+        width: 26%;
+        border-left-style: solid;
+        border-width: 10px;
+        border-color: #B5C336;
+        padding: 20px 0px 20px 30px;
+        margin-left: 15%;
+        margin-right: 3%;
+        margin-bottom: 2%;
+        float: left;
+    }
+    #pq-byline {
+        font-family: 'Domine', serif;
+        font-size: 11pt;
+        font-weight: 500;
+        line-height: 1em;
+        width: 60%;
+        margin-bottom: 5%;
     }
 }
 

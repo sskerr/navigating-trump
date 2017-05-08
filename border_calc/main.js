@@ -1,40 +1,72 @@
 //Add in external javacript file
 $(document).ready(function () { //checks if html is fully loaded
-	$("input[type='number']").on("keydown", function (e) {
+	$("input[type='number']").on("keydown keyup keypress", function (e) {
 		if (e.keyCode === 190) {
 			e.preventDefault();
 		}
 	});
 	$("#compute").on("click", function (e) {
 		e.preventDefault();
-		var mango = parseFloat($("#mango").val());
-		var avocado = parseFloat($("#avocado").val());
-		var tomato = parseFloat($("#tomato").val());
-		var banana = parseFloat($("#banana").val());
-		var strawberry = parseFloat($("#strawberry").val());
-		var lime = parseFloat($("#lime").val());
-		var pineapple = parseFloat($("#pineapple").val());
-		var coffee = parseFloat($("#coffee").val());
-		var beer = parseFloat($("#beer").val());
-		var tequila = parseFloat($("#tequila").val());
+		var mango = 0;
+		var avocado = 0;
+		var tomato = 0;
+		var banana = 0;
+		var tangerine = 0;
+		var strawberry = 0;
+		var lime = 0;
+		var pineapple = 0;
+		var beer = 0;
+		var tequila = 0;
+
+		if ($("#mango").val()) {
+			mango = parseFloat($("#mango").val());
+		}
+
+		if ($("#avocado").val()) {
+			avocado = parseFloat($("#avocado").val());
+		}
+
+		if ($("#tomato").val()) {
+			tomato = parseFloat($("#tomato").val());
+		}
+
+		if ($("#banana").val()) {
+			banana = parseFloat($("#banana").val());
+		}
+
+		if ($("#coffee").val()) {
+			coffee = parseFloat($("#coffee").val());
+		}
+
+		if ($("#strawberry").val()) {
+			strawberry = parseFloat($("#strawberry").val());
+		}
+
+		if ($("#strawberry").val()) {
+			strawberry = parseFloat($("#strawberry").val());
+		}
+
+		if ($("#lime").val()) {
+			lime = parseFloat($("#lime").val());
+		}
+
+		if ($("#pineapple").val()) {
+			pineapple = parseFloat($("#pineapple").val());
+		}
+		if ($("#beer").val()) {
+			beer = parseFloat($("#beer").val());
+		}
+		if ($("#tequila").val()) {
+			tequila = parseFloat($("#tequila").val());
+		}
 
 
-		var total = calculate(mango, avocado, tomato, banana, coffee, strawberry, lime, pineapple, beer, tequila);
+
+
+		var total = calculate(mango, avocado, tomato, banana, tangerine, strawberry, lime, pineapple, beer, tequila);
+
 		var sqft = wall(total);
-		//	var wall = wall(wall);
 
-		// var total = 0;
-		//
-		// $("input[type='number']").each(function () {
-		// 	var fruit = $(this);
-		// 	var storePrice = parseFloat(fruit.data("storePrice"));
-		// 	var likelihood = parseFloat(fruit.data("likelihood"));
-		// 	var qty = parseInt(fruit.val());
-		//
-		// 	var calc = qty * ((storePrice * 1.2) - storePrice);
-		//
-		// 	total = total + calc;
-		// });
 
 		$("#final-answer").addClass("active");
 		$("#final-answer2").addClass("active");
@@ -49,10 +81,15 @@ $(document).ready(function () { //checks if html is fully loaded
 });
 
 
-function calculate(mango, avocado, tomato, banana, tangerine, strawberry, lime, pineapple, beer, tequila) {
+function calculate(mango, avocado, tomato, banana, coffee, strawberry, lime, pineapple, beer, tequila) {
+	var total = (mango * .53 * delta(1.75)) + (avocado * .59 * delta(1.5)) + (tomato * delta(.5)) + (banana * delta(.2)) + (coffee * delta(.3)) + (strawberry * delta(.08)) + (lime * delta(.08)) + (tequila * delta(25)) + (beer * delta(3))
 
-	return (((mango * .53) * ((1.75 * 1.20) - 1.75)) + ((avocado * .59) * ((1.5 * 1.20) - 1.5)) + ((tomato * .41) * ((.5 * 1.20) - .5)) + ((banana * .03) * ((.20 * 1.2) - .20)) + ((tangerine * .04) * ((.1 * 1.2) - .1)) + ((strawberry * .08) * ((2.5 * 1.2) - 2.5)) + ((lime * .95) * ((.2 * 1.2) - .2)) + ((tequila * .99) + ((25 * 1.2) - 25))) * 48
+	return total
 };
+
+function delta(price) {
+	return (price * 1.2) - price;
+}
 
 function showIt(total, sqft) {
 	$("#final-results").text(total.toFixed(2));
