@@ -82,8 +82,7 @@ $(document).ready(function () { //checks if html is fully loaded
 
 
 function calculate(mango, avocado, tomato, banana, coffee, strawberry, lime, pineapple, beer, tequila) {
-	var total = (mango * .53 * delta(1.75)) + (avocado * .59 * delta(1.5)) + (tomato * delta(.5)) + (banana * delta(.2)) + (coffee * delta(.3)) + (strawberry * delta(.08)) + (lime * delta(.08)) + (tequila * delta(25)) + (beer * delta(3))
-
+	var total = (((mango * .50 * delta(.14)) + (avocado * .79 * delta(.23)) + (tomato * .44 * delta(.2)) + (banana * .06 * delta(.15)) + (coffee * .04 * delta(.3)) + (strawberry * .11 * delta(1.96)) + (lime * .41 * delta(.1)) + (pineapple * .06 * delta(1.1)) + (tequila * delta(25)) + (beer * delta(3))) * 48)
 	return total
 };
 
