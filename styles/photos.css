@@ -19,7 +19,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
     line-height: 1;
-    margin: 100px;
 }
 
 ol, ul {
@@ -45,6 +44,7 @@ table {
 
 html, body {
     font-size: 16px;
+    background-color: ##FBF8F5;
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
 }
 
