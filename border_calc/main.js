@@ -11,7 +11,7 @@ $(document).ready(function () { //checks if html is fully loaded
 		var avocado = 0;
 		var tomato = 0;
 		var banana = 0;
-		var tangerine = 0;
+		var coffee = 0;
 		var strawberry = 0;
 		var lime = 0;
 		var pineapple = 0;
@@ -34,9 +34,7 @@ $(document).ready(function () { //checks if html is fully loaded
 			banana = parseFloat($("#banana").val());
 		}
 
-		if ($("#coffee").val()) {
-			coffee = parseFloat($("#coffee").val());
-		}
+
 
 		if ($("#strawberry").val()) {
 			strawberry = parseFloat($("#strawberry").val());
@@ -53,6 +51,11 @@ $(document).ready(function () { //checks if html is fully loaded
 		if ($("#pineapple").val()) {
 			pineapple = parseFloat($("#pineapple").val());
 		}
+
+		if ($("#coffee").val()) {
+			coffee = parseFloat($("#coffee").val());
+		}
+
 		if ($("#beer").val()) {
 			beer = parseFloat($("#beer").val());
 		}
@@ -63,7 +66,7 @@ $(document).ready(function () { //checks if html is fully loaded
 
 
 
-		var total = calculate(mango, avocado, tomato, banana, tangerine, strawberry, lime, pineapple, beer, tequila);
+		var total = calculate(mango, avocado, tomato, banana, strawberry, lime, pineapple, coffee, beer, tequila);
 
 		var sqft = wall(total);
 
@@ -81,8 +84,8 @@ $(document).ready(function () { //checks if html is fully loaded
 });
 
 
-function calculate(mango, avocado, tomato, banana, coffee, strawberry, lime, pineapple, beer, tequila) {
-	var total = (((mango * .50 * delta(.14)) + (avocado * .79 * delta(.23)) + (tomato * .44 * delta(.2)) + (banana * .06 * delta(.15)) + (coffee * .04 * delta(.3)) + (strawberry * .11 * delta(1.96)) + (lime * .41 * delta(.1)) + (pineapple * .06 * delta(1.1)) + (tequila * delta(25)) + (beer * delta(3))) * 48)
+function calculate(mango, avocado, tomato, banana, strawberry, lime, pineapple, coffee, beer, tequila) {
+	var total = (((mango * .50 * delta(.14)) + (avocado * .79 * delta(.23)) + (tomato * .44 * delta(.2)) + (banana * .06 * delta(.15)) + (strawberry * .11 * delta(1.96)) + (lime * .41 * delta(.1)) + (pineapple * .06 * delta(1.1)) + (coffee * .04 * delta(.3)) + (beer * .08 * delta(.43)) + (tequila * 1 * delta(7.17))) * 48)
 	return total
 };
 
